@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.ComponentModel.DataAnnotations;
-using using_reflection_in_a_validation_sample.ValidatorCaseiro;
+using ValidadorCaseiroApi;
+using ValidadorCaseiroApi.Validador;
 
 Console.WriteLine("Construindo um novo validador de objetos usando Reflection");
 Console.WriteLine();
@@ -22,10 +23,11 @@ ValidationContext validationContext = new(novoLivro);
 var validationResult = new List<ValidationResult>();
 
 if (!Validator.TryValidateObject(novoLivro, validationContext, validationResult))
-    validationResult.ToList().ForEach(x =>
-    {
-        Console.WriteLine($"  -> {x.ErrorMessage}");
-    });
+    validationResult
+        .ToList()
+        .ForEach(x =>
+        Console.WriteLine($"  -> {x.ErrorMessage}")
+    );
 
 
 
@@ -33,13 +35,15 @@ if (!Validator.TryValidateObject(novoLivro, validationContext, validationResult)
 Console.WriteLine();
 Console.WriteLine();
 
-Console.WriteLine("Usando a nosso validador caseirinho :D");
-
-var validadorCaseiro = new ValidadorCaseiro(novoLivro);
-validadorCaseiro.ValidarObjeto().Erros.ToList().ForEach(x => 
-{
-    Console.WriteLine($"  -> {x.Mensagem}");
-});
+Console.WriteLine("Usando o nosso validador caseirinho :D");
+ValidadorCaseiro validadorCaseiro = new(novoLivro);
+validadorCaseiro
+    .ValidarObjeto()
+    .Erros
+    .ToList()
+    .ForEach(x => 
+        Console.WriteLine($"  -> {x.Mensagem}")
+);
 
 
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "using-reflection-in-a-validation-sample", "using-reflection-in-a-validation-sample.csproj", "{2519114C-4966-453E-8477-DDCFD2B96E7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidadorCaseiroApi", "ValidadorCaseiroApi.csproj", "{2519114C-4966-453E-8477-DDCFD2B96E7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

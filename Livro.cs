@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using using_reflection_in_a_validation_sample.ValidatorCaseiro;
+using ValidadorCaseiroApi.Validador.Implementacoes;
 
-namespace using_reflection_in_a_validation_sample
+namespace ValidadorCaseiroApi
 {
     public class Livro
     {
-        [Required]  
+        [Required]    //Componente Model 
         [Obrigatorio] // Validador "Caseiro"
         public string? Titulo { get; set; }
 
