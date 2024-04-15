@@ -12,7 +12,7 @@ namespace ValidadorCaseiroApi.Validador
         public ValidadorCaseiroResultado ValidarObjeto()
         { 
             if (_objeto is null) 
-                throw new ArgumentNullException();
+                throw new ArgumentNullException("O objeto da validação não pode ser nulo.");
 
             var propriedadesDaClasseParaValidar = 
                 _objeto
